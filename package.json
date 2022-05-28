@@ -1,0 +1,29 @@
+{
+  "name": "ghb-notification",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn build; act --secret-file .secret test",
+    "build": "ncc build src/action.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanu-labs/ghb-notification.git"
+  },
+  "author": "hanuman.dasa@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanu-labs/ghb-notification/issues"
+  },
+  "homepage": "https://github.com/hanu-labs/ghb-notification#readme",
+  "devDependencies": {
+    "@actions/core": "^1.8.2",
+    "@actions/github": "^5.0.3",
+    "@vercel/ncc": "^0.34.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

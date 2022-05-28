@@ -1,0 +1,27 @@
+name: 'Notification'
+description: 'Notify the result of a job'
+author: 'Hanu'
+
+inputs:
+  MESSAGE:
+    description: 'Text to notify if success'
+  TARGET:
+    description: 'Target service'
+  BRANCH:
+    description: 'Branch name'
+  ENVIRONMENT:
+    description: 'Environment'
+  SLACK_WEBHOOK:
+    description: 'Slack WebHook URL'
+  SLACK_CHANNEL:
+    description: 'Slack channel'
+  TAGS:
+    description: 'JSON array'
+  FIELDS:
+    description: 'JSON object'
+  RESULT:
+    description: 'success | failure'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
